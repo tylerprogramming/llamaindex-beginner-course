@@ -24,7 +24,9 @@ while True:
 - LlamaParse
 - LlamaHub
 - LlamaCloud (is a waitlist, but promising features)
-
+- NEEDED:
+    - OPENAI_API_KEY
+    - PHOENIX_API_KEY (https://llamatrace.com/login)
 
 
 ## Overview
