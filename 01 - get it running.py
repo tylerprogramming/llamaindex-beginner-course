@@ -6,15 +6,22 @@ from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, StorageCon
 
 documents = SimpleDirectoryReader("pdf/").load_data()
 
+index = VectorStoreIndex.from_documents(documents) 
+index.storage_context.persist(persist_dir="storage")
 
-if os.path.exists("storage"):
-    print("Loading index from storage")
-    storage_context = StorageContext.from_defaults(persist_dir="storage")
-    index = load_index_from_storage(storage_context)
-else:
-    print("Creating new index")
-    index = VectorStoreIndex.from_documents(documents) 
-    index.storage_context.persist(persist_dir="storage")
+query_engine = index.as_query_engine()
+
+response = query_engine.query("What are the design goals and give details about it please.")
+
+
+# if os.path.exists("storage"):
+#     print("Loading index from storage")
+#     storage_context = StorageContext.from_defaults(persist_dir="storage")
+#     index = load_index_from_storage(storage_context)
+# else:
+#     print("Creating new index")
+#     index = VectorStoreIndex.from_documents(documents) 
+#     index.storage_context.persist(persist_dir="storage")
 
 query_engine = index.as_query_engine()
 
