@@ -51,5 +51,3 @@ agent = ReActAgent.from_tools([multiply_tool, add_tool, sub_tool, divide_tool], 
 response = agent.chat("What is 20+(2*4) / (5 - 1)? Use a tool to calculate every step.")        
 
 print(response)
-
-# also do this with ollama
