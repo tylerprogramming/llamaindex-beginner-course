@@ -24,9 +24,10 @@ while True:
 - LlamaParse
 - LlamaHub
 - LlamaCloud (is a waitlist, but promising features)
-- NEEDED:
+- NEEDED (copy `.env.example` to `.env` and fill these in):
     - OPENAI_API_KEY
     - PHOENIX_API_KEY (https://llamatrace.com/login)
+    - LLAMA_CLOUD_API_KEY for `07 - llama parse.py` (https://cloud.llamaindex.ai)
 
 
 ## Overview
