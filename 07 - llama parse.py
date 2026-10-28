@@ -1,12 +1,14 @@
 import nest_asyncio
+from dotenv import load_dotenv
 
 nest_asyncio.apply()
+load_dotenv()  # LLAMA_CLOUD_API_KEY (and OPENAI_API_KEY) from .env
 
 from llama_parse import LlamaParse
 from llama_index.core import SimpleDirectoryReader, VectorStoreIndex
 
 parser = LlamaParse(
-    api_key="llx-FEEOy75qNytHDasHebdwMBpf1HyPc1lPzs2qdyru251Yx98T",  # can also be set in your env as LLAMA_CLOUD_API_KEY
+    # LlamaParse reads the key from the LLAMA_CLOUD_API_KEY environment variable
     result_type="markdown",  # "markdown" and "text" are available
     verbose=True,
 )
