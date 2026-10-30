@@ -32,7 +32,7 @@ while True:
 
 ## Overview
 
-The main script (`llamaindex/main.py`) performs the following tasks:
+The core lessons (`01 - get it running.py`, `05 - observability.py`, `07 - llama parse.py`) follow the same flow:
 
 1. Loads documents from a PDF directory
 2. Creates or loads a vector store index
