@@ -59,7 +59,6 @@ llama-index-cli==0.3.1
 llama-index-core==0.11.8
 llama-index-embeddings-openai==0.2.4
 llama-index-indices-managed-llama-cloud==0.3.0
-llama-index-instrumentation-agentops==0.1.0
 llama-index-legacy==0.9.48.post3
 llama-index-llms-openai==0.2.3
 llama-index-multi-modal-llms-openai==0.2.0
