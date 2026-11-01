@@ -64,6 +64,12 @@ python "01 - get it running.py"
 
 `04 - rag pipeline.py` loads its index from a local Chroma database in `chroma_db/`. On the first run that folder is empty, so uncomment the `VectorStoreIndex.from_documents(...)` block once to build it.
 
+## Models
+
+Every lesson answers with `gpt-4o`. LlamaIndex 0.11 falls back to `gpt-3.5-turbo` when no model is set, and OpenAI shut that model down on 2026-10-23 ([deprecations](https://developers.openai.com/api/docs/deprecations)), so lessons 01, 04, 05 and 07 now set `Settings.llm` and lesson 03 passes its `llm` to the chat engine.
+
+`gpt-4o` is scheduled to be removed on 2027-01-14. The pinned `llama-index-llms-openai==0.2.3` only knows models up to `gpt-4o-mini` and raises `Unknown model` for newer names such as `gpt-5.4-mini`, so moving past that date means upgrading LlamaIndex as well as changing the model name. For current LlamaIndex code, see the [llamaindex-course in ai-courses](https://github.com/tylerprogramming/ai-courses/tree/main/llamaindex-course).
+
 ## Code Explanation
 ### Environment Setup
 
