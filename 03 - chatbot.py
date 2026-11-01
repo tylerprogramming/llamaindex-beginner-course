@@ -12,7 +12,7 @@ data = SimpleDirectoryReader(input_dir="./data/paul_graham/").load_data()
 index = VectorStoreIndex.from_documents(data)
 
 
-chat_engine = index.as_chat_engine(chat_mode="condense_question", verbose=True)
+chat_engine = index.as_chat_engine(chat_mode="condense_question", llm=llm, verbose=True)
 # response = chat_engine.chat("What did Paul Graham do after YC?")
 
 while True:
