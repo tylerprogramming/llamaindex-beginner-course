@@ -1,8 +1,12 @@
 import os
 from dotenv import load_dotenv
-from llama_index.core import SimpleDirectoryReader
+from llama_index.core import SimpleDirectoryReader, Settings
+from llama_index.llms.openai import OpenAI
 
 load_dotenv()
+
+# Without this, LlamaIndex 0.11 answers with gpt-3.5-turbo, which OpenAI shut down.
+Settings.llm = OpenAI(model="gpt-4o")
 
 # 1. Load data
 documents = SimpleDirectoryReader("./data/paul_graham/").load_data()

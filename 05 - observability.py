@@ -12,7 +12,11 @@ llama_index.core.set_global_handler(
     "arize_phoenix", endpoint="https://llamatrace.com/v1/traces"
 )
 
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, StorageContext, load_index_from_storage
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, StorageContext, load_index_from_storage, Settings
+from llama_index.llms.openai import OpenAI
+
+# Without this, LlamaIndex 0.11 answers with gpt-3.5-turbo, which OpenAI shut down.
+Settings.llm = OpenAI(model="gpt-4o")
 
 documents = SimpleDirectoryReader("pdf/").load_data()
 

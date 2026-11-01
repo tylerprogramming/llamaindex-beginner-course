@@ -5,7 +5,11 @@ nest_asyncio.apply()
 load_dotenv()  # LLAMA_CLOUD_API_KEY (and OPENAI_API_KEY) from .env
 
 from llama_parse import LlamaParse
-from llama_index.core import SimpleDirectoryReader, VectorStoreIndex
+from llama_index.core import SimpleDirectoryReader, VectorStoreIndex, Settings
+from llama_index.llms.openai import OpenAI
+
+# Without this, LlamaIndex 0.11 answers with gpt-3.5-turbo, which OpenAI shut down.
+Settings.llm = OpenAI(model="gpt-4o")
 
 parser = LlamaParse(
     # LlamaParse reads the key from the LLAMA_CLOUD_API_KEY environment variable
