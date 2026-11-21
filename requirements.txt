@@ -24,6 +24,7 @@ chromadb==0.5.5
 click==8.1.7
 coloredlogs==15.0.1
 dataclasses-json==0.6.7
+defusedxml==0.7.1
 Deprecated==1.2.14
 dirtyjson==1.0.8
 distro==1.9.0
@@ -81,7 +82,7 @@ multidict==6.1.0
 mypy-extensions==1.0.0
 nest-asyncio==1.6.0
 networkx==3.3
-nltk==3.9.1
+nltk==3.10.4
 numba==0.60.0
 numpy==1.26.4
 oauthlib==3.2.2
