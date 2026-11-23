@@ -6,7 +6,7 @@ aiosignal==1.3.1
 aiosqlite==0.20.0
 alembic==1.13.2
 annotated-types==0.7.0
-anyio==4.4.0
+anyio==4.14.2
 arize-phoenix==4.33.1
 arize-phoenix-evals==0.15.1
 arize-phoenix-otel==0.4.1
@@ -38,9 +38,9 @@ googleapis-common-protos==1.65.0
 graphql-core==3.2.4
 greenlet==3.0.3
 grpcio==1.66.1
-h11==0.14.0
+h11==0.16.0
 hdbscan==0.8.38.post1
-httpcore==1.0.5
+httpcore==1.0.9
 httptools==0.6.1
 httpx==0.27.2
 huggingface-hub==0.24.6
@@ -109,7 +109,7 @@ orjson==3.10.7
 overrides==7.7.0
 packaging==23.2
 pandas==2.2.2
-pillow==10.4.0
+pillow==13.0.0
 posthog==3.6.5
 protobuf==4.25.4
 psutil==5.9.8
@@ -119,7 +119,7 @@ pyasn1_modules==0.4.0
 pydantic==2.9.1
 pydantic_core==2.23.3
 Pygments==2.18.0
-PyJWT==2.9.0
+PyJWT==2.15.1
 pynndescent==0.5.13
 pypdf==4.3.1
 PyPika==0.48.9

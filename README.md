@@ -45,7 +45,7 @@ The core lessons (`01 - get it running.py`, `05 - observability.py`, `07 - llama
 
 ## Setup
 
-`requirements.txt` pins `onnxruntime==1.16.3` (pulled in by chromadb), which only ships wheels for Python 3.8 to 3.11, so use **Python 3.10 or 3.11**:
+`requirements.txt` pins `onnxruntime==1.16.3` (pulled in by chromadb), which only ships wheels for Python 3.8 to 3.11, and `pillow==13.0.0` needs Python 3.11 or newer, so use **Python 3.11**:
 
 ```bash
 python3.11 -m venv .venv
