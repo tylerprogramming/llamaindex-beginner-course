@@ -111,6 +111,7 @@ packaging==23.2
 pandas==2.2.2
 pillow==13.0.0
 posthog==3.6.5
+propcache==0.5.4
 protobuf==4.25.4
 psutil==5.9.8
 pyarrow==17.0.0
